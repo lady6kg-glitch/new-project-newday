@@ -3,87 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Алихан - 27 школа</title>
+    <title>Портфолио - Тешебаев Алихан</title>
     <style>
         body {
-            font-family: 'Segoe UI', sans-serif;
-            background: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+            background-color: #f8f9fa;
+            color: #333;
         }
-        .card {
-            background: white;
-            padding: 40px;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        header, footer {
             text-align: center;
-            width: 350px;
+            margin-bottom: 30px;
         }
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 70px;
-            object-fit: cover;
-            border: 4px solid #007bff;
-            margin-bottom: 20px;
+        .project, .donation-block {
+            margin-bottom: 25px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        h1 { margin: 10px 0; color: #222; font-size: 26px; }
-        p { color: #555; font-size: 18px; margin: 5px 0; }
-        .phone-btn {
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+        /* Стили для блока пожертвований */
+        .donation-block {
+            text-align: center;
+            border: 2px dashed #007bff;
+        }
+        .qr-code {
+            width: 180px;
+            height: 180px;
+            margin: 15px auto;
+            display: block;
+            border: 1px solid #eee;
+        }
+        .donate-btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background: #28a745;
+            padding: 10px 20px;
+            background-color: #007bff;
             color: white;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 5px;
             font-weight: bold;
+            margin-top: 10px;
         }
-        .school-info {
-            background: #e7f3ff;
-            padding: 10px;
-            border-radius: 10px;
-            margin: 15px 0;
-            color: #007bff;
-            font-weight: bold;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            height: 100px;
-            border-radius: 12px;
-            object-fit: cover;
-        }
+        .donate-btn:hover { background-color: #0056b3; }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=400" alt="Alikhan" class="profile-img">
-    
+<header>
     <h1>Тешебаев Алихан</h1>
-    
-    <div class="school-info">
-        27 школа • 6 "Г" класс
-    </div>
-    
-    <p>Кыргызстан</p>
-    
-    <a href="tel:+996704026166" class="phone-btn">📞 Позвонить</a>
+    <p>Ученик 27 школы</p>
+</header>
 
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=200" alt="School life">
-        <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=200" alt="Books">
+<main>
+    <div class="project">
+        <h3>Первый проект</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/I7U4Ma6SICc" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
-</div>
+
+    <div class="project">
+        <h3>Проект 2</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/n8aVS4ffUkk" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="donation-block">
+        <h3>Для пожертвования</h3>
+        <p>Если вам нравятся мои проекты, вы можете поддержать меня:</p>
+        
+        <img src="qr.png" alt="QR-код для оплаты" class="qr-code">
+        
+        <br>
+        <a href="ССЫЛКА_НА_ТВОЙ_ДОНАТ" class="donate-btn">Поддержать автора</a>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 Тешебаев Алихан</p>
+</footer>
 
 </body>
 </html>
